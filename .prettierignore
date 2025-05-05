@@ -1,0 +1,9 @@
+*.json
+*.local
+*.mjs
+/dist
+node_modules
+package-lock.json
+public
+src/components/ui/*
+tailwind.config*.ts

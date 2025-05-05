@@ -35,11 +35,13 @@
     "**/*.css"
   ],
   "scripts": {
+    "clean": "del-cli ./dist && del-cli ./*.tgz",
     "dev": "vite",
-    "build": "tsc --p ./tsconfig.lib.json && vite build",
+    "build": "npm run clean && tsc --p ./tsconfig.lib.json && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "prepack": "npm run build"
   },
   "dependencies": {
     "crypto-js": "^4.2.0",
@@ -58,6 +60,7 @@
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
     "@vitejs/plugin-react": "^4.3.4",
+    "del-cli": "^6.0.0",
     "eslint": "^9.26.0",
     "eslint-config-prettier": "^10.1.2",
     "eslint-plugin-import-helpers": "^2.0.1",

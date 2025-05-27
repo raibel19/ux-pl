@@ -1,2 +1,2 @@
 // export { Button } from "./components/Button";
-export * as utilities from "./utils";
+export * as utilities from './utils';
